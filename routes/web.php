@@ -47,7 +47,7 @@ Route::get('/listing/{listing}/edit',[ListingController::class,'edit']) -> middl
 Route::get('/listing/manage',[ Listingcontroller::class,'manage']);
 
 // Show single listing
-Route::get('/listing/{listing}',[ListingController::class,'show']);
+Route::get('/listing/{listing}',[ListingController::class,'show'])-> middleware('auth');
 
 
 // Delete Listing
